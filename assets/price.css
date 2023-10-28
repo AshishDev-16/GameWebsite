@@ -1,0 +1,124 @@
+*{
+    background: #1A1A1A;
+    margin:0;
+    padding: 0;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue","sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 7px 80px;
+    display: flex;      
+    justify-content: space-between;
+    align-items: center; 
+    transition: 0.5s;
+    z-index: 1000;
+}
+header.sticky{
+    background: #000000;
+    box-shadow: 0 5px 20px rgba(175, 163, 163, 0.9);
+}
+header .logo{
+    background: transparent;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Parmanent Marker',cursive;
+}
+header .nav{
+    background: transparent;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+    font-size: 2vmin;
+}
+header ul li a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  display: inline-block;
+  background-color: transparent;
+  font-weight:700;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+header  ul li a:hover{
+    background: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px #fff;
+    transition: 0.6s ease;
+}
+
+/* Footer*/
+footer{
+
+    position: absolute;
+    background: transparent;
+    padding: 10px 100px;
+    margin-top: 40%;
+    width: 89%;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer .info .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+footer .info h4{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+footer .info  ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+}
+footer .info ul li:hover{
+    background: #fff;
+    border: none;
+    box-shadow: 0 0 10px #fff;
+}
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer .info ul li:hover a i{
+    color: #000000;
+    transition: 0.6s ease; 
+}

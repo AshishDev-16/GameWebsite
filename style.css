@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Ruslan+Display&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: #252525;
+    overflow-x: hidden;
+    
+}
+/*Scroll Bar*/
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: #fff;
+    border-radius: 6px;
+}
+/*Scroll Bar end*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    transition: 0.5s;
+    z-index: 1000;
+}
+header.sticky{
+    background: #000000;
+    box-shadow: 0 5px 20px rgba(175, 163, 163, 0.9);
+}
+header .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'DM Serif Display', serif;
+
+}
+header .nav{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+}
+header  ul li a:hover{
+    background: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px #fff;
+    transition: 0.6s ease;
+}
+
+
+/*SearchBx*/
+
+
+header .action .SearchBx input{
+    position: relative;
+    right: 150px;
+    padding: 3px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    background: transparent;
+    width: 100px;
+    height: 25px;
+    border: solid 3px #fff;
+    outline: none;
+    border-radius: 35px;
+    transition: all 0.5s ease;
+}
+header .action .SearchBx input::placeholder{
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+header .action .SearchBx input:focus::placeholder{
+    opacity: 1;
+}
+header .action .SearchBx input:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),                                                             
+            0 6px 20px 0 #FFBB70;
+}
+header .action .SearchBx input:focus,
+header .action .SearchBx input:not(:placeholder-shown){
+    width: 250px;                                                                   
+}
+
+/*
+ header .action .SearchBx{
+    padding: 3px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+ }*/
+ header .action .SearchBx i{
+    position: absolute;
+    right: 300px;
+    font-size: 1.0em;
+    margin: 5px;
+    color: #FFF;
+ }
+
+ /*
+ header .action .SearchBx input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #222;
+ }
+ */
+
+
+ /* Home banner*/
+
+ .banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.banner .bg .content{
+    width: 50%;
+    height: 100%;
+}
+
+.banner .bg .content h2{
+    font-size: 5em;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family:'Ruslan Display', cursive;
+
+}
+.banner .bg .content p{
+    font-size: 1em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #00ffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content a:hover{
+    background: #ffff;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #fff;
+    transition: 0.6s ease;
+}
+/*.banner .bg img{
+    width: 540px;
+    height: 700px;
+}*/
+.banner  .back-video {
+    position: absolute;
+    width: 120%;
+    min-height: 80vh;
+    z-index: -1;
+}
+
+/*.banner  .back-video {
+    position: absolute;
+    width: 110%;
+    min-height: 100vh;
+    z-index: -1;
+}
+*/
+/* about */
+
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .contentBx{
+    width: 50%;
+    margin: 20px;
+}
+.about .contentBx h2{
+    font-size: 3em;
+    font-weight:700;
+    color: #fff;
+}
+.about .contentBx p{
+    max-width: 600px;
+    text-align: justify;
+    color: #fff;
+}
+.about img{
+    position: relative;
+    left: 5pt;
+    height: 650px;
+    width: 620px;
+}
+.about .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #00ffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentBx a:hover{
+    background: #ffff;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #fff;
+    transition: 0.6s ease;
+}
+
+/*carousel*/
+#carouselExampleCaptions{
+    position: relative;
+    left: 150px;
+    width: 85%;
+    min-height: 80vh;
+
+}
+
+
+
+/*games*/
+
+.games{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+.games h1{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.games ul li{
+
+    /*display: inline-block;*/
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: rgb(255, 255, 255); 
+}
+
+.games ul li.active{
+    background:#fff;
+    color: #000000;
+    box-shadow: 0 0 10px #fff ;
+}
+
+.games .cardBx{
+    
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.games .cardBx .card{
+    position: relative;
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: rgb(87, 86, 86);
+    overflow: hidden;
+    
+}
+
+.games .cardBx .card img{
+    /*border-bottom: 5px solid #fff;*/
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+
+    
+}
+
+.games .cardBx .card .content{
+    padding: 10px;
+
+}
+.games .cardBx .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+
+}
+.games .cardBx .card .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #3d3e3e;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    
+
+}
+.games .cardBx .card .progress-line span{
+    
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{                               
+        transform: scaleX(1); 
+    }
+}
+
+
+.games .cardBx .card .info{
+    border-top: 2px solid #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.games .cardBx .card .info p{
+    font-size: 1em;
+    color: #fff;
+
+}
+
+.games .cardBx .card .info p span{
+    color: #fff;
+
+}
+.games .cardBx .card .info a button{
+    background: none;
+    display: inline-block;
+    padding: 5px 8px;
+    margin: 10px 0;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+
+.games .cardBx .card .info a button:hover{
+    background: #ffff;
+    border-radius: 5px;
+    color: #050e2d;
+    box-shadow: 0 0 5px #fff;
+    transition: 0.6s ease;   
+             
+}
+.games .cardBx .card.hide{
+     display: none;
+}
+
+.view a{
+    right: 50px;
+    font-size: 2vmin;
+    color:#fff
+}
+
+
+.view {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Contact*/
+.contact{
+    background: #686868;
+    padding: 10px 100px;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.contact .form{
+    width: 50%;
+    margin: 30px;
+}
+.contact .form h1{
+    color: #fff;
+
+}
+.contact .form .inputBx{
+    margin: 10px 0;
+}
+.contact .form .inputBx p{
+    color: #fff;
+}
+.contact .form .inputBx input,
+.contact .form .inputBx textarea{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    background: rgb(59, 59, 59);
+    min-height: 15px;
+    font-size: 1.1em;
+}
+.contact .form .inputBx textarea{
+    height: 150px;
+}
+
+
+.contact .form  a{
+    position: relative;
+    background: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+
+  .contact .form a:hover {
+    background: #fff;
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff,
+                0 0 25px #fff,
+                0 0 50px #fff,
+                0 0 100px #fff;
+  }
+  
+
+
+
+/* Footer*/
+footer{
+    background: #222;
+    padding: 10px 100px;
+    width: 130%;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer .info .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+footer .info p{
+    color: #fff;
+}
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .info  ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+}
+footer .info ul li:hover{
+    background: #fff;
+    border: none;
+    box-shadow: 0 0 10px #fff;
+}
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer .info ul li:hover a i{
+    color: #000000;
+    transition: 0.6s ease; 
+}

@@ -1,0 +1,134 @@
+<html>
+    <head >
+        <meta charset = " UTF - 8 " >
+        <meta name = " viewport " content = " width = device - width , initial - scale = 1.0 " >
+        <title > Gaming Website </title >
+        <link rel = " stylesheet " href = "login.css" >
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--favicon icon-->
+        <link rel="Shortcut Icon" type="image/png" href="favicon.png">
+        
+
+    </head >
+    <body>
+       <!--<a href="index.html"><button>Go Back</button></a>-->
+
+
+       <div class="cotn_principal">
+        <div class="cont_centrar">
+        
+          <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+              <div class="col_md_login">
+        <div class="cont_ba_opcitiy">
+                
+                <h2>LOGIN</h2>  
+          <p>Have an account?</p> 
+          <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+          </div>
+          </div>
+        <div class="col_md_sign_up">
+        <div class="cont_ba_opcitiy">
+        <h2>SIGN UP</h2>
+        
+          
+          <p>Don't have an account?</p>
+        
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+        </div>
+          </div>
+               </div>
+        
+            
+            <div class="cont_back_info">
+               <div class="cont_img_back_grey">
+               <img src="K.png" alt="" />
+               </div>
+               
+            </div>
+        <div class="cont_forms" >
+            <div class="cont_img_back_">
+               <img src="K.png  " alt="" />
+               </div>
+         <div class="cont_form_login">
+        <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+           <h2>LOGIN</h2>
+         <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="index.html"><button class="btn_login" onclick="cambiar_login()">LOGIN</button></a>
+          </div>
+          
+           <div class="cont_form_sign_up">
+        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+             <h2>SIGN UP</h2>
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="User" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <a href="index.html"><button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button></a>
+        
+          </div>
+        
+            </div>
+            
+          </div>
+         </div>
+        </div>
+
+        <script>
+          /* ------------------------------------ Click on login and Sign Up to  changue and view the effect
+---------------------------------------
+*/
+
+function cambiar_login() {
+  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
+document.querySelector('.cont_form_login').style.display = "block";
+document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+
+setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },400);  
+  
+setTimeout(function(){    
+document.querySelector('.cont_form_sign_up').style.display = "none";
+},200);  
+  }
+
+function cambiar_sign_up(at) {
+  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
+  document.querySelector('.cont_form_sign_up').style.display = "block";
+document.querySelector('.cont_form_login').style.opacity = "0";
+  
+setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
+},100);  
+
+setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
+},400);  
+
+
+}    
+
+
+
+function ocultar_login_sign_up() {
+
+document.querySelector('.cont_forms').className = "cont_forms";  
+document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+document.querySelector('.cont_form_login').style.opacity = "0"; 
+
+setTimeout(function(){
+document.querySelector('.cont_form_sign_up').style.display = "none";
+document.querySelector('.cont_form_login').style.display = "none";
+},500);  
+  
+  }
+
+
+
+
+        </script>
+    
+
+
+
+</body>
+</html>
